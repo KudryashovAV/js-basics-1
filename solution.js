@@ -48,6 +48,14 @@ function fizzBuzz() {
 }
 
 function chessBoard(size) {
+  var arr = [];
+  for (i = 1; i <= size; i++) {
+    var a = Array(size + 1).join((i % 2 !== 0) ? " #" : "# ").slice(0, size);
+    arr.push(a);
+  }
+  return arr.join('\n');
+}
+
   // Write a program that creates a string that represents an 8×8 grid,
   // using newline characters to separate lines. At each position of the
   // grid there is either a space or a “#” character. The characters
@@ -67,7 +75,6 @@ function chessBoard(size) {
   // When you have a program that generates this pattern,
   // define a variable size = 8 and change the program so that
   // it works for any size, outputting a grid of the given width and height.
-}
 
 module.exports.squaresOfMax = squaresOfMax;
 module.exports.drawTriangle = drawTriangle;
